@@ -1,6 +1,6 @@
 # Day 1 - CRM Basics
 
-## What is CRM?
+What is CRM?
 
 CRM stands for Customer Relationship Management.  
 It is a system used by companies to manage customer information, communication, sales activities, and support services in one place.
@@ -13,9 +13,9 @@ Examples:
 - Handling customer support
 - Sending follow-up emails
 
----
 
-## Why Companies Use Salesforce
+
+Why Companies Use Salesforce
 
 Salesforce is one of the most popular CRM platforms used worldwide.
 
@@ -30,35 +30,35 @@ Companies use Salesforce because:
 
 Salesforce helps businesses save time and improve productivity.
 
----
 
-## Salesforce Objects
 
-### Account
+Salesforce Objects
+
+Account
 Account represents an organization, company, hospital, college, or business entity.
 
 Example:
 ABC Hospital
 
----
 
-### Contact
+
+Contact
 Contact represents a person related to the account.
 
 Example:
 Patient or Student
 
----
 
-### Opportunity
+
+Opportunity
 Opportunity represents a possible business deal or conversion.
 
 Example:
 Admission process or treatment package
 
----
 
-## Real-World Mapping (Hospital Example)
+
+Real-World Mapping (Hospital Example)
 
 | Salesforce Object | Real-Life Example |
 |------------------|------------------|
@@ -67,19 +67,7 @@ Admission process or treatment package
 | Lead | Person asking about treatment |
 | Opportunity | Patient planning treatment |
 
----
 
-## Trailhead Work
 
-Completed Trailhead tasks:
-- Created Property Object
-- Created Offer Object
-- Created Master-Detail Relationship
-- Created Lookup Relationship
-- Added Street Address field using Schema Builder
 
----
 
-## Screenshots
-
-Screenshots are added in the screenshots folder.
