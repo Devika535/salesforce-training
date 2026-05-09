@@ -76,5 +76,3 @@ User Interaction
 
 
 
-## Accounts or Contacts Tab
-![Tab Screenshot](screenshots/accounts-tab.png)
