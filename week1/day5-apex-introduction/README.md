@@ -1,93 +1,197 @@
 # Salesforce Summer Program – Day 5
 
-Introduction
-Today I learned about Apex programming in Salesforce and understood why enterprise systems require both no-code automation and custom programming.
+## Introduction
 
-1. What is Apex?
-Apex is Salesforce’s programming language used to implement custom business logic and advanced automation inside the Salesforce platform.
-It allows developers to:
-- Write custom logic
+Today I learned why Salesforce uses Apex programming along with Flows and other no-code tools. I understood that declarative tools are useful for standard automation, but some business requirements need custom programming and advanced logic.
+
+---
+
+# 1. What is Apex?
+
+Apex is the programming language used in Salesforce to build custom business functionality. It is mainly used when business requirements become too complex for normal configuration or Flow automation.
+
+Using Apex, developers can:
+- Create advanced automation
+- Write custom business rules
 - Perform database operations
-- Handle complex calculations
-- Integrate external systems
-- Process large data efficiently
-Apex works similarly to Java and runs on Salesforce servers.
+- Connect Salesforce with external systems
+- Process large amounts of records
 
-2. Difference Between Flow and Apex
+Apex runs directly on the Salesforce platform and works similarly to Java.
+
+---
+
+# 2. Difference Between Flow and Apex
+
 | Flow | Apex |
 |---|---|
-| No-code automation | Programming-based solution |
-| Easy to build | Requires coding knowledge |
+| Built using drag-and-drop | Written using code |
 | Best for simple automation | Best for complex logic |
-| Drag-and-drop interface | Written using code |
-| Faster development | Greater flexibility |
+| Easier for admins | Requires programming knowledge |
+| Faster to create | More flexible |
+| Limited customization | Advanced customization possible |
 
-3. Configuration vs Coding
+---
+
+# 3. Difference Between Configuration and Coding
+
 | Configuration | Coding |
 |---|---|
-| Uses clicks not code | Uses programming |
-| Faster for standard tasks | Better for advanced requirements |
-| Easier maintenance | More customization possible |
-| Limited flexibility | Highly flexible |
+| Uses clicks and setup tools | Uses programming logic |
+| Suitable for standard business processes | Suitable for complex requirements |
+| Easy to maintain | More development effort needed |
+| Less flexible | Highly flexible |
 
-4. Real Examples Where Apex Is Needed
-1. External Payment Gateway Integration
-Flow alone may not handle advanced API communication and response processing efficiently.
-Apex allows secure integration with external payment systems.
-2. Complex Scholarship Eligibility Logic
-Eligibility may depend on marks, attendance, income, reservation category, and ranking.
-Apex handles multi-condition business rules efficiently.
-3. Bulk Student Record Processin
-4. Processing thousands of student records using Flow may affect performance.
-Apex supports optimized bulk operations.
+---
 
-5. Integrated College Management System Design
-CRM Usage
-Salesforce CRM manages student admissions, faculty, courses, payments, and notifications.
-Objects
+# 4. Real Examples Where Apex Is Needed
+
+## 1. Online Fee Payment Integration
+
+A college may use external payment applications like Razorpay or Stripe for collecting fees. Simple Flows are not always enough for secure API communication and response handling.
+
+Apex can securely connect Salesforce with external payment systems and process payment responses automatically.
+
+---
+
+## 2. Scholarship Eligibility Calculation
+
+Scholarship approval may depend on:
+- Attendance percentage
+- Previous semester marks
+- Family income
+- Reservation category
+- Backlog history
+
+Managing all these conditions inside a Flow becomes difficult and hard to maintain.
+
+Apex handles complex calculations and conditions more efficiently.
+
+---
+
+## 3. Bulk Student Data Processing
+
+During admissions, thousands of student records may be uploaded at once. Large-scale processing through Flow can affect performance and create limitations.
+
+Apex supports bulk processing and handles large data operations more effectively.
+
+---
+
+# 5. Integrated College Management System Design
+
+## CRM Usage
+
+Salesforce CRM is used to manage the complete student admission and course management process.
+
+The system stores:
+- Student information
+- Course details
+- Faculty records
+- Fee payment status
+- Notifications and updates
+
+---
+
+## Objects Used
+
 - Student
 - Course
 - Faculty
 - Admission
 - Payment
-Relationships
-- Student → Course
-- Faculty → Course
-- Student → Payment
 
-Validation Rules
-- Email cannot be empty
-- Invalid phone numbers restricted
-- Course seat limits validated
-Formula Example
-Remaining Seats = Total Seats - Enrolled Students
+---
 
-6. Flow Usage
-- Admission confirmation emails
-- Attendance warning notifications
-- Auto status updates
-- Fee reminder alerts
+## Relationships
 
-7. Apex Usage
+- One student can enroll in multiple courses
+- Faculty members are assigned to courses
+- Each student has payment records linked to their account
+
+---
+
+## Validation Rules
+
+Validation rules help maintain proper data quality inside the system.
+
+Examples:
+- Student email should not be empty
+- Phone number must contain valid digits
+- Admission should not continue if seats are unavailable
+
+---
+
+## Formula Field Example
+
+Remaining Seats Formula:
+
+```text
+Total Seats - Filled Seats
+```
+
+This formula automatically shows available seats for each course.
+
+---
+
+# 6. Flow Usage in the System
+
+Flows are used for normal automation tasks such as:
+- Sending admission confirmation emails
+- Updating application status automatically
+- Sending attendance warning notifications
+- Sending fee reminder emails
+
+These processes reduce manual work for college staff.
+
+---
+
+# 7. Apex Usage in the System
+
+Apex is used for advanced business requirements such as:
+- Scholarship eligibility calculation
 - Payment gateway integration
-- Scholarship calculation
-- Advanced eligibility verification
-- Bulk record processing
+- Bulk admission processing
+- Advanced approval conditions
 
-8. Pseudocode Examples
-Example 1
-IF seats are full  
-THEN block registration
-Example 2
-IF attendance < 75%  
-THEN notify student
-Example 3
-IF payment successful  
+These operations require more flexibility than normal configuration tools.
+
+---
+
+# 8. Pseudocode Examples
+
+## Example 1 – Seat Availability Check
+
+```text
+IF available seats = 0
+THEN block admission
+ELSE allow registration
+```
+
+---
+
+## Example 2 – Attendance Warning
+
+```text
+IF attendance percentage < 75
+THEN send warning notification to student
+```
+
+---
+
+## Example 3 – Fee Payment Confirmation
+
+```text
+IF payment successful
 THEN generate hall ticket
+```
 
-10. Reflection – Why Enterprise Systems Need Programming
-Enterprise systems contain complex workflows, integrations, validations, and large-scale operations. Declarative tools like Flow simplify standard automation, but advanced business requirements often need custom programming. Apex provides flexibility, scalability, and precise control over business processes.
+---
 
+# 9. Reflection – Why Enterprise Systems Need Programming
 
+Enterprise applications manage large amounts of data and business operations. Some processes are simple and can be automated using Flow, but many real business scenarios involve complicated rules, external systems, and high-volume processing.
 
-capabilities beyond declarative automation. I learned how enterprise applications combine no-code tools and programming to solve complex business problems efficiently.
+Programming languages like Apex help organizations build scalable and flexible solutions that cannot be achieved using only clicks and configuration. Apex gives developers better control over business logic and allows Salesforce applications to support complex enterprise requirements efficiently.
+
+---
+
