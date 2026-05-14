@@ -4,7 +4,7 @@
 
 Today’s focus was on increasing Trailhead completion while understanding the bigger picture of Salesforce technologies. I explored enterprise search systems, platform events, and developer command-line tools used in real-world Salesforce development workflows.
 
----
+
 
 # Modules Completed
 
@@ -12,28 +12,28 @@ Today’s focus was on increasing Trailhead completion while understanding the b
 ### What I Learned
 I learned how Salesforce search helps users quickly find records, files, and business information across large systems. I also understood that optimized search improves productivity and reduces time spent manually locating data.
 
-### One Doubt
+One Doubt
 How does Salesforce rank search results when multiple similar records exist?
 
----
+
 
 ## 2. Agentforce 360 Platform Events Basics
-### What I Learned
+## What I Learned
 I learned that platform events help systems communicate automatically using event-driven architecture. Multiple systems or users can react instantly whenever an important business event occurs.
 
-### One Doubt
+One Doubt
 How do platform events handle failures if one connected system is temporarily unavailable?
 
----
+
 
 ## 3. Command-Line Interface (CLI)
 ### What I Learned
 I learned that developers use CLI tools to work faster, automate tasks, and manage projects more efficiently compared to only using graphical interfaces.
 
-### One Doubt
+One Doubt
 How do large development teams organize Salesforce CLI workflows for multiple projects?
 
----
+
 
 # Platform Event Thinking
 
@@ -52,29 +52,19 @@ Student fee payment completed.
 ### Why This Matters
 One business action can instantly notify multiple systems and users without manual communication.
 
----
+
 
 # CLI Reflection
 
 Developers prefer command-line tools because they are faster, easier to automate, and improve productivity. CLI tools also help manage deployments, version control, and project workflows efficiently in large development environments.
 
----
+
 
 # Search Reflection
 
 Fast and accurate search is important because enterprise systems store huge amounts of data. Good search functionality helps employees find information quickly, improves productivity, and supports faster business decisions.
 
----
 
-# Screenshot of Trailhead Progress
-
-(Add your screenshot here after completing modules)
-
-Example:
-
-![Trailhead Progress Screenshot](screenshot.png)
-
----
 
 # Overall Reflection
 
